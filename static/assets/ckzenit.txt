@@ -1,0 +1,19 @@
+﻿Хостинг на nic.ru
+
+Номер договора (он же логин): 2874588
+Технический пароль: sn1KG2hQ90eA8WUZV7XCBr54J
+
+****
+
+Solid skill set in WP API/Plugins/Woo Commerce API Development
+Solid skill set in GraphQL, Apollo and or REST API
+Solid skill set in Node and or Node Frameworks
+Solid skill set in MariaDB (WordPress database)
+Have experience deploying via Linux/Ubuntu/Docker/AWS/Heroku 
+Ability to build high-performing and scalable applications 
+Ability to create independent, modular code 
+Know and use Jira and BitBucket, GIT regularly
+Work closely with other developers  
+Perform PM tasks – create Jira Stories (if needed)
+Have part to full-time availability (20-40 hours/week) 
+All code needs to be OSI or MIT licensed
