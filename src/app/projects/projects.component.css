@@ -1,0 +1,128 @@
+@import '~swiper/dist/css/swiper.min.css';
+
+h2.oi-heading {
+  font-size: 18px;
+  line-height: 1.66;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: 8px;
+}
+
+h3.oi-client {
+    color: #0099d8;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+
+article.page.page-objects {
+    height: 550px;
+    position: relative;
+}
+
+span.oi-num {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b6b6b6;
+    line-height: 0.9;
+    display: block;
+    margin-bottom: 60px;
+    padding-left: 10px;
+    transition: all .3s ease;
+}
+
+.oi-content {
+    width: 248px;
+    height: 248px;
+    position: relative;
+    margin-bottom: 64px;
+}
+
+img.oi-thumb {
+    position: absolute;
+    transition: all .3s ease;
+}
+
+.oi-text {
+    padding: 40px 20px 0;
+}
+
+a.oi-link {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'century gothic';
+    letter-spacing: .150em;
+    margin-right: 14px;
+    float: right;
+    border-bottom: 1px solid #1e1d1b;
+    transition: all .3s ease;
+}
+
+.olist__item:hover a.oi-link {
+    color: #4774a0;
+    border-bottom: transparent;
+}
+
+.olist__item {
+    width: 248px;
+    height: 416px;
+    overflow: auto;
+    cursor: pointer;
+    outline: none;
+}
+
+.olist__item:hover img.oi-thumb {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.olist__item:hover > .oi-num {
+    color: #4774a0;
+}
+
+button.sc {
+    background: none;
+    border: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    padding: 0;
+    outline: none;
+}
+
+button.sc.ol {
+    width: 30px;
+    height: 12px;
+}
+
+.olist__controls {
+    max-width: 432px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    bottom: 28px;
+    left: 0;
+}
+
+.swiper-scrollbar {
+    width: 156px;
+    height: 2px;
+    background: #b6b6b6;
+    display: block;
+}
+
+.swiper-scrollbar-drag {
+    background: #1fbad6;
+}
+
+.swiper-outer-wrap {
+    height: 416px;
+}
+
+.swiper-container {
+  max-width: 1100px;
+}

@@ -1,0 +1,47 @@
+<article class="page page-contacts">
+
+  <div class="row row-contacts">
+
+    <div class="contacts__col-left contacts__col">
+      <div class="contact__page-content" [innerHTML]="content | safe: 'html'"></div>
+
+      <div [hidden]="submitted">
+        <form class="contacts__form" (ngSubmit)="onSubmit()" #heroForm="ngForm">
+
+          <h2 class="contacts__form-heading">Обратная связь</h2>
+
+          <input  type="text" class="contacts__input" placeholder="Ваше имя"
+          required
+          [(ngModel)]="model.name" name="name">
+
+          <input  type="email" class="contacts__input" placeholder="Email"
+          required
+          [(ngModel)]="model.email" name="email">
+
+          <input  type="text" class="contacts__input" placeholder="Сообщение"
+          required
+          [(ngModel)]="model.message" name="message">
+
+          <button type="submit" class="contacts__submit"
+          [disabled]="!heroForm.form.valid">отправить</button>
+
+        </form>
+      </div>
+
+      <div [hidden]="!submitted">
+
+        <p>Сообщение отправлено</p>
+        <p>{{response}}</p>
+
+      </div>
+
+    </div>
+
+    <div class="contacts__col-right contacts__col">
+      <!-- google map here -->
+      <div #gmap class="gmap-placeholder"></div>
+    </div>
+
+  </div>
+
+</article>

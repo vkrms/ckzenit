@@ -1,0 +1,31 @@
+<article class="page page-docs">
+
+  <h1 class="article-heading">разрешительная документация</h1>
+
+  <swiper class="swiper-container docs" [config]="config">
+    <!-- <div class="swiper-wrapper"> -->
+
+      <div class="docs__item swiper-slide" *ngFor="let doc of docs; let i = index">
+        <span class="doc-num">{{i + 1 | number:'2.0-0'}}</span>
+        <div class="docs__img-wrap">
+          <img [src]="doc.thumb"/>
+        </div>
+        <div class="docs__item-content">
+          <h4 class="docs__name">
+            {{doc.name}}
+          </h4>
+          <a href="{{doc.file}}" class="docs__link">{{doc.size}}</a>
+        </div>
+      </div>
+
+    <!-- </div> -->
+
+  </swiper>
+
+  <div class="docs__controls">
+      <button class="sc ol ol-prev arrw-hor"><svg><use xlink:href="#Arrow-left"/></svg></button>
+      <div class="swiper-scrollbar"></div>
+      <button class="sc ol ol-next arrw-hor"><svg><use xlink:href="#Arrow-right"/></svg></button>
+  </div>
+
+</article>

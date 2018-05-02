@@ -1,1 +1,227 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family:'Century Gothic';
+    src: url('/assets/fonts/cg.woff2') format('woff2'),
+		url('/assets/fonts/cg.woff') format('woff');
+    font-weight: 400;
+    unicode-range: U+0020-F003;
+}
+
+@font-face {
+    font-family:'Century Gothic';
+    src: url('/assets/fonts/cg-bold.woff2') format('woff2'),
+		url('/assets/fonts/cg-bold.woff') format('woff');
+    font-weight: 700;
+    unicode-range: U+0020-F003;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat-Regular.woff2') format('woff2'),
+       url('/assets/fonts/Montserrat-Regular.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat-Medium.woff2') format('woff2'),
+       url('/assets/fonts/Montserrat-Medium.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat-Bold.woff2') format('woff2'),
+       url('/assets/fonts/Montserrat-Bold.woff') format('woff');
+  font-weight: 700;
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #1e1d1b;
+  margin: 0;
+  /* height: 100vh; */
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+svg.sprites {
+    position: absolute;
+    visibility: hidden;
+}
+
+#object__slider > .swiper.s-wrapper .swiper-wrapper .swiper-slide {
+  overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    /* height: calc(100% - 120px); */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.object__content > ul {
+    padding: 0 0 0 22px;
+    margin: 24px 0;
+}
+
+.object__content > ul > li {
+    list-style-image: url(assets/img/marker.svg);
+    margin-bottom: 17px;
+}
+
+a#logo-link {
+    width: 136px;
+    height: 36px;
+    display: block;
+}
+
+#psoc .ps__thumb-y {
+    width: 2px;
+    background-color: #2799d6;
+    border-radius: 0;
+    right: 0;
+}
+
+#psoc .ps__rail-y:focus>.ps__thumb-y, .ps__rail-y:hover>.ps__thumb-y {
+    width: 2px;
+    background-color: #2799d6;
+    right: 0;
+}
+
+perfect-scrollbar#psoc>.ps.ps--active-y>.ps__rail-y,
+perfect-scrollbar#psoc>.ps.ps--active-y>.ps__rail-y:hover {
+    width: 2px;
+    background-color: #c6c6c6;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.swiper-scrollbar > .swiper-scrollbar-drag {
+    height: 100%;
+    background: #2799d6;
+}
+
+button {
+    -webkit-appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    outline: none;
+    transition: all .3s ease;
+    fill: #1e1e1e;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #4774a0;
+    fill: #4774a0;
+}
+
+.arrw-hor {
+    width: 30px;
+    height: 12px;
+}
+
+h1.article-heading {
+    margin: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .15em;
+    margin-bottom: 64px;
+    font-family: 'montserrat';
+}
+
+article {
+    width: 100%;
+    display: block;
+}
+
+app-clients, app-contacts, app-docs, app-home, app-projects, app-property {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    align-items: center;
+    /* padding-bottom: 120px; */
+    box-sizing: border-box;
+}
+
+[hidden] {
+  transition: all 1s ease;
+}
+
+i.loc:before,
+i.mob:before,
+i.env:before {
+  width: 18px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 24px;
+  vertical-align: -4px;
+}
+
+
+i.loc:before {
+  content: url(/assets/img/loc.svg);
+}
+
+i.mob:before {
+  content: url(/assets/img/mob.svg);
+}
+
+i.env:before {
+  content: url(/assets/img/env.svg);
+}
+
+.contact__page-content {
+    line-height: 40px;
+}
+
+.lh24 {
+  line-height: 24px;
+  display: inline-block;
+}
+
+article.page swiper>.swiper.s-wrapper .swiper-wrapper .swiper-slide {
+    overflow: hidden;
+    max-height: 70vh;
+}
+
+svg, use, path, polygon, symbol {
+  fill: inherit;
+}
+
+main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: calc( 70vh + 176px );
+    margin: auto;
+}

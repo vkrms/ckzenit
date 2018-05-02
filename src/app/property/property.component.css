@@ -1,0 +1,154 @@
+.object__slider {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+h2.object__heading {
+  font-size: 18px;
+  line-height: 1.66;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: 8px;
+}
+
+article.page.page-object {
+    display: flex;
+    /*flex-flow: row wrap; */
+    height: 70vh;    
+    position: relative;
+}
+
+.object__text {
+    flex: 0 1 50%;
+    padding-left: 34px;
+    height: 100%;
+}
+
+h3.object__client {
+    color: #0099d8;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+#object__slider    > .swiper.s-wrapper   .swiper-wrapper   .swiper-slide {
+    overflow: hidden !important;
+}
+
+#object__slider .swiper-slide > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.object__content {
+    font-size: 14px;
+    line-height: 1.57;
+    font-family: 'Century Gothic';
+    padding-right: 32px;
+}
+
+.object__text-inner {
+    max-width: 522px;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.object__slider-wrap {
+    flex: 0 1 44%;
+}
+
+a.object__back {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'century gothic';
+    text-decoration: underline;
+    letter-spacing: .150em;
+}
+
+.footer-controls {
+    margin: 0 -14px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fc>svg {
+    width: 30px;
+    height: 9px;
+    margin: 0 14px;
+}
+
+footer.object__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    width: 100%;
+}
+
+button.sc {
+    -webkit-appearance: none;
+    border: none;
+    background: none;
+    display: block;
+    width: 9px;
+    height: 30px;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+span.sc-num {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    margin: 6px 0;
+    line-height: 0.8;
+}
+
+.oject__slider-controls {
+    height: 305px;
+    width: 16px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+span#sc-sep {
+    display: block;
+    width: 2px;
+    height: 42px;
+    background: #000;
+    opacity: .3;
+    margin: 10px 0;
+}
+
+button.sc.sc-prev {
+    margin-bottom: 60px;
+}
+
+button.sc.sc-next {
+    margin-top: 60px;
+}
+
+span.sc-num.sc-faded {
+    opacity: .3;
+}
+
+a.fc {
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+a.fc:hover {
+    color: #2799d7;
+    fill: #2799d7;
+}

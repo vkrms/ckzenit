@@ -1,0 +1,34 @@
+<!-- component template -->
+
+
+<article class="page homepage">
+
+  <div [swiper]="config" class="swiper-container slides">
+    <div class="swiper-wrapper">
+
+      <div class="slider__item swiper-slide" *ngFor="let slide of slides">
+        <img class="hs-image" [src]="slide.img">
+        <div class="hs-content">
+          <h1 class="hs-name">{{slide.name}}</h1>
+          <br>
+          <h3 class="hs-client">{{slide.client}}</h3>
+        </div>
+        <a routerLink="/property/{{slide.link}}" class="hs-link">смотреть проект</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="olist__controls">
+      <button class="sc ol ol-prev arrw-hor"><svg><use xlink:href="#Arrow-left"/></svg></button>
+      <div class="hs-controls-inner">
+        <span class="sc-num-l sc-num">01</span>
+        <div class="swiper-scrollbar"></div>
+        <span class="sc-num-r sc-num">03</span>
+      </div>
+      <button class="sc ol ol-next  arrw-hor"><svg><use xlink:href="#Arrow-right"/></svg></button>
+  </div>
+
+</article>
+
+<!-- component template end -->

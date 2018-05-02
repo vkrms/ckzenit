@@ -4,5 +4,10 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  server: "http://localhost:8085",
+  // resource: "http://localhost:8085/wp-json/ckz/v1",
+  get resource() {
+    return this.server + '/wp-json/ckz/v1'
+  }
 };

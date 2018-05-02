@@ -1,0 +1,75 @@
+<article class="page page-companies">
+
+  <section class="companies clients">
+
+    <h1 class="companies-heading">клиенты</h1>
+
+    <div class="swiper-outer-wrap">
+      <div class="swiper-container clients" [swiper]="config_a">
+
+        <div class="swiper-wrapper">
+
+          <div class="clients__item swiper-slide" *ngFor="let client of clients">
+            <div class="clients__img-wrap">
+              <img [src]="client.thumb"/>
+            </div>
+
+            <div class="clients__item-content">
+              <h4 class="clients__name">
+                {{client.name}}
+              </h4>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="clients__controls">
+        <button class="sc ol ol-prev ol-prev-c arrw-hor"><svg><use xlink:href="#Arrow-left"/></svg></button>
+        <div class="swiper-scrollbar swiper-scrollbar-c"></div>
+        <button class="sc ol ol-next ol-next-c arrw-hor"><svg><use xlink:href="#Arrow-right"/></svg></button>
+      </div>
+    </div>
+
+  </section>
+
+
+<section class="companies partners">
+
+  <h1 class="companies-heading">партнеры</h1>
+
+  <div class="swiper-outer-wrap">
+
+    <div class="swiper-container partners" [swiper]="config_b">
+      <div class="swiper-wrapper">
+
+        <div class="partners__item swiper-slide" *ngFor="let partner of partners">
+          <div class="partners__img-wrap">
+            <img [src]="partner.thumb"/>
+          </div>
+
+          <div class="partners__item-content">
+            <h4 class="partners__name">
+              {{partner.name}}
+            </h4>
+            {{partner.content}}
+          </div>
+        </div>
+
+
+      </div>
+    </div> <!-- swiper end -->
+
+    <div class="partners__controls">
+      <button class="sc ol ol-prev ol-prev-p arrw-hor"><svg><use xlink:href="#Arrow-left"/></svg></button>
+      <div class="swiper-scrollbar swiper-scrollbar-p"></div>
+      <button class="sc ol ol-next ol-next-p arrw-hor"><svg><use xlink:href="#Arrow-right"/></svg></button>
+    </div>
+
+  </div>
+
+</section>
+
+
+</article>

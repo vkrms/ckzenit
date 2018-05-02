@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 15px;
+    align-items: center;
+}
+
+nav.header-nav > a {
+    font-size: 14px;
+    font-family: 'century gothic';
+    margin: 0 10px;
+    color: #1e1d1b;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+nav.header-nav > a:hover {
+    color: #2599d5;
+}
+
+a.header-phone {
+    font-size: 14px;
+    color: #2799d6;
+    font-weight: bold;
+}

@@ -1,0 +1,32 @@
+<article class="page page-objects">
+
+  <div class="swiper-outer-wrap">
+    <div #swiper [swiper]="config" class="swiper objects swiper-container" id="objects_slider">
+
+      <div class="swiper-wrapper">
+
+        <div class="olist__item swiper-slide"
+        *ngFor="let project of projects; let i = index"
+        routerLink="/property/{{project.id}}" >
+          <span class="oi-num">{{i + 1 | number:'2.0-0'}}</span>
+          <div class="oi-content">
+            <img class="oi-thumb" [src]="project?.thumb">
+            <div class="oi-text">
+              <h2 class="oi-heading">{{project.name}}</h2>
+              <h3 class="oi-client">{{project.client}}</h3>
+            </div>
+          </div>
+          <a routerLink="/property/{{project.id}}" class="oi-link">смотреть проект</a>
+        </div>
+      </div>
+   </div>
+  </div>
+
+
+  <div class="olist__controls">
+      <button class="sc ol ol-prev"><svg><use xlink:href="#Arrow-left"/></svg></button>
+      <div class="swiper-scrollbar"></div>
+      <button class="sc ol ol-next"><svg><use xlink:href="#Arrow-right"/></svg></button>
+  </div>
+
+</article>
