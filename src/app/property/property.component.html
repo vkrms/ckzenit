@@ -15,7 +15,8 @@
     </div>
 
     <div class="object__slider-wrap">
-      <swiper [config]="swiperCfg" class="object__slider" id="object__slider">
+      <swiper [config]="swiperCfg" class="object__slider" id="object__slider"
+      (indexChange)="onIndexChange($event)">
         <li *ngFor="let img of images">
           <img [src]="img"/>
         </li>
@@ -26,8 +27,8 @@
       <button class="sc sc-prev"><svg><use xlink:href="#Arrow-top"/></svg></button>
       <span class="sc-num">01</span>
       <span id="sc-sep"></span>
-      <span class="sc-num sc-faded">16</span>
-      <span class="sc-num">17</span>
+      <span class="sc-num sc-faded">{{index | number:'2.0-0'}}</span>
+      <span class="sc-num">{{total | number:'2.0-0'}}</span>
       <button class="sc sc-next"><svg><use xlink:href="#Arrow-down"/></svg></button>
     </div>
 

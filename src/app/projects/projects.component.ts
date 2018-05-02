@@ -30,6 +30,10 @@ export class ProjectsComponent implements OnInit {
   }
 
 
+  public onIndexChange(index: number): void {
+    console.log('Swiper index: ', index);
+  }
+
   config = {
     initialSlide: 0,
     slidesPerView: 4,

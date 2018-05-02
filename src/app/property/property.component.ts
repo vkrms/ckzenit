@@ -17,7 +17,9 @@ export class PropertyComponent implements OnInit {
   @Input() prev;
   @Input() next;
 
-  props; id;
+  props; id; total;
+
+  index = 0o1;
   IDs = [];
 
 
@@ -51,6 +53,7 @@ export class PropertyComponent implements OnInit {
       .subscribe(property => {
         this.property = property;
         this.images = property.attachments;
+        this.total = property.attachments.length;
       });
   }
 
@@ -70,6 +73,12 @@ export class PropertyComponent implements OnInit {
       // console.log('next',this.next,'prev',this.prev);
     });
   }
+
+  public onIndexChange(index: number): void {
+    // console.log('Swiper index: ', index);
+    this.index = index + 1;
+  }
+
 
   swiperCfg = {
     direction: 'vertical',
