@@ -25,3 +25,11 @@ a.header-phone {
     color: #2799d6;
     font-weight: bold;
 }
+
+@media screen and (min-width: 2240px) {
+
+  header{
+    max-width: 1700px;
+  }
+
+}

@@ -74,11 +74,16 @@ a.docs__link:before {
     justify-content: space-between;
     max-width: 993px;
     margin: 64px auto 0;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 article.page.page-docs {
     max-height: 618px;
-    position: relative;
+    /* position: relative; */
 }
 
 .swiper-container {

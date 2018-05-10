@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { SwiperModule, SwiperConfigInterface, SwiperDirective } from 'ngx-swiper-wrapper';
 
 import { Property } from '../property';
 import { PropertyService } from '../property.service';
@@ -11,6 +12,7 @@ import { PropertyService } from '../property.service';
 export class ProjectsComponent implements OnInit {
 
   @Input() projects: Property[]
+  @ViewChild(SwiperDirective) swiperView: SwiperDirective;
 
   constructor(private propertyService: PropertyService) { }
 
@@ -19,19 +21,15 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    // swiper().update();
+    setTimeout(()=>this.swiperView.setIndex(0),450);
   }
 
   getProperties() {
     this.propertyService.getProperties().subscribe(props => {
       this.projects = props;
-      // console.log(props);
+      // this.swiperView.update();
+      // window.dispatchEvent(new Event('resize'));
     })
-  }
-
-
-  public onIndexChange(index: number): void {
-    console.log('Swiper index: ', index);
   }
 
   config = {
@@ -40,6 +38,7 @@ export class ProjectsComponent implements OnInit {
     slidesPerGroup: 4,
     spaceBetween: 32,
     observer: true,
+    updateOnImagesReady: true,
     navigation: {
       nextEl: '.ol-next',
       prevEl: '.ol-prev'

@@ -76,9 +76,10 @@ svg.sprites {
 .container {
     max-width: 1200px;
     width: 100%;
-    /* height: calc(100% - 120px); */
+    height: calc(100% - 120px);
     margin: 0 auto;
     padding: 0 15px;
+    position: relative;
 }
 
 .object__content > ul {
@@ -217,11 +218,11 @@ svg, use, path, polygon, symbol {
 }
 
 main {
-    position: absolute;
+    /* position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    height: calc( 70vh + 176px );
-    margin: auto;
+    height: calc( 70vh + 176px ); */
+    margin: 24px auto;
 }

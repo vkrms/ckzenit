@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "@types/googlemaps": "^3.30.8",
+    "angular-5-popup": "0.0.6",
     "core-js": "^2.4.1",
     "ngx-perfect-scrollbar": "^5.3.5",
     "ngx-swiper-wrapper": "^5.3.8",

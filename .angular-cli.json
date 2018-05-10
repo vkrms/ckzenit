@@ -8,7 +8,7 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "assets",        
+        "assets",
         "32.png"
       ],
       "index": "index.html",
@@ -19,7 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "2240.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

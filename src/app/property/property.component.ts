@@ -1,9 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { Property } from '../property';
 import { PropertyService } from '../property.service';
+
+import { SwiperModule, SwiperConfigInterface, SwiperDirective } from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-property',
@@ -17,11 +19,16 @@ export class PropertyComponent implements OnInit {
   @Input() prev;
   @Input() next;
 
+  @ViewChild(SwiperDirective) swiperView: SwiperDirective;
+
   props; id; total;
 
   index = 0o1;
   IDs = [];
 
+  anew($event) {
+    console.log('click');
+  }
 
   constructor(
     private route: ActivatedRoute,
@@ -31,8 +38,11 @@ export class PropertyComponent implements OnInit {
     route.params.subscribe(val => {
       this.getProperty();
       this.setPrevNextLink();
+      // this.test = 0; //reset swiper position
     });
   }
+
+
 
   ngOnInit(): void {
 
@@ -42,6 +52,10 @@ export class PropertyComponent implements OnInit {
 
     this.setPrevNextLink();
 
+  }
+
+  resetIndex(){
+    this.swiperView.setIndex(0);
   }
 
   getProperty() {
@@ -83,7 +97,7 @@ export class PropertyComponent implements OnInit {
   swiperCfg = {
     direction: 'vertical',
     slidesPerView: 1,
-    // loop: true,
+    observer: true,
     mousewheel: true,
     navigation: {
       nextEl: '.sc-next',

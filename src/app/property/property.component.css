@@ -1,3 +1,5 @@
+@import '~swiper/dist/css/swiper.min.css';
+
 .object__slider {
   display: block;
   width: 100%;
@@ -17,7 +19,7 @@ h2.object__heading {
 article.page.page-object {
     display: flex;
     /*flex-flow: row wrap; */
-    height: 70vh;    
+    height: 70vh;
     position: relative;
 }
 
@@ -31,6 +33,10 @@ h3.object__client {
     color: #0099d8;
     font-size: 15px;
     margin-bottom: 16px;
+}
+
+#object__slider {
+  overflow: hidden;
 }
 
 #object__slider    > .swiper.s-wrapper   .swiper-wrapper   .swiper-slide {
@@ -151,4 +157,8 @@ a.fc {
 a.fc:hover {
     color: #2799d7;
     fill: #2799d7;
+}
+
+.swiper-wrapper > li {
+    list-style: none;
 }

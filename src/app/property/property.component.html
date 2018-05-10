@@ -15,12 +15,16 @@
     </div>
 
     <div class="object__slider-wrap">
-      <swiper [config]="swiperCfg" class="object__slider" id="object__slider"
-      (indexChange)="onIndexChange($event)">
-        <li *ngFor="let img of images">
-          <img [src]="img"/>
-        </li>
-      </swiper>
+
+      <div #swiperView [swiper]="swiperCfg" class="object__slider" id="object__slider"
+      (indexChange)="onIndexChange($event)" [index]="0">
+        <div class="swiper-wrapper">
+          <li *ngFor="let img of images" class="swiper-slide">
+            <img [src]="img"/>
+          </li>
+        </div>
+      </div>
+
     </div>
 
     <div class="oject__slider-controls">
@@ -36,9 +40,10 @@
 </article>
 
 <footer class="object__footer">
+  <!-- <a (click)="anew($event)">go to 0</a> -->
   <a routerLink="/projects/" class="object__back">вернуться к списку</a>
   <div class="footer-controls">
-    <a class="fc fc-prev" [routerLink]="prev"><svg><use xlink:href="#Arrow-left"/></svg>предыдущий проект</a>
-    <a class="fc fc-next" [routerLink]="next">следующий проект<svg><use xlink:href="#Arrow-right"/></svg></a>
+    <a class="fc fc-prev" [routerLink]="prev" (click)="resetIndex()"><svg><use xlink:href="#Arrow-left"/></svg>предыдущий проект</a>
+    <a class="fc fc-next" [routerLink]="next" (click)="resetIndex()">следующий проект<svg><use xlink:href="#Arrow-right"/></svg></a>
   </div>
 </footer>

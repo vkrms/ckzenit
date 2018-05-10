@@ -1,4 +1,4 @@
-ng serve -sm -ec
+ng serve -sm -ec --prod
 
 # Ckzenit
 

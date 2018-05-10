@@ -1,7 +1,9 @@
 <article class="page page-objects">
 
+  <!-- <a (click)="swupdate()">обновить</a> -->
+
   <div class="swiper-outer-wrap">
-    <div #swiper [swiper]="config" class="swiper objects swiper-container" id="objects_slider">
+    <div #swiperView [swiper]="config" class="swiper objects swiper-container" id="objects_slider" >
 
       <div class="swiper-wrapper">
 
@@ -18,15 +20,16 @@
           </div>
           <a routerLink="/property/{{project.id}}" class="oi-link">смотреть проект</a>
         </div>
+
       </div>
+
    </div>
   </div>
 
-
-  <div class="olist__controls">
-      <button class="sc ol ol-prev"><svg><use xlink:href="#Arrow-left"/></svg></button>
-      <div class="swiper-scrollbar"></div>
-      <button class="sc ol ol-next"><svg><use xlink:href="#Arrow-right"/></svg></button>
-  </div>
-
 </article>
+
+<div class="olist__controls">
+  <button class="sc ol ol-prev"><svg><use xlink:href="#Arrow-left"/></svg></button>
+  <div class="swiper-scrollbar"></div>
+  <button class="sc ol ol-next"><svg><use xlink:href="#Arrow-right"/></svg></button>
+</div>

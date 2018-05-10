@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
     initialSlide: 0,
     slidesPerView: 1,
     slidesPerGroup: 1,
+    // loop: true,
     observer: true,
     navigation: {
       nextEl: '.ol-next',

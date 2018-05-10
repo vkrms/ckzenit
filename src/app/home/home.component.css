@@ -6,7 +6,7 @@
     /* overflow: hidden; */
     display: flex;
     align-items: center;
-    max-height: 70vh;
+    height: 56vh;
 }
 
 img.hs-image {
@@ -85,6 +85,12 @@ a.hs-link {
     align-items: center;
     justify-content: space-between;
     margin-top: 64px;
+    /* position: absolute; */
+    right: 0;
+    bottom: 0;
+    left: 0px;
+    left: 5%;
+    width: 81%;
 }
 
 .hs-controls-inner {
@@ -102,4 +108,8 @@ a.hs-link {
 
 article.page.homepage {
     padding-left: 4%;
+}
+
+@media screen and (min-width: 2240px) {
+
 }
