@@ -11,7 +11,7 @@ import {} from '@types/googlemaps';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.css']
+  // styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
   @ViewChild('gmap') gmapElement;

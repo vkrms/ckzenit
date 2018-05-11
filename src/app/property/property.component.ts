@@ -10,7 +10,7 @@ import { SwiperModule, SwiperConfigInterface, SwiperDirective } from 'ngx-swiper
 @Component({
   selector: 'app-property',
   templateUrl: './property.component.html',
-  styleUrls: ['./property.component.css']
+  // styleUrls: ['./property.component.css']
 })
 export class PropertyComponent implements OnInit {
 
