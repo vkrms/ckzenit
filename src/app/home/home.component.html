@@ -7,7 +7,7 @@
     <div class="swiper-wrapper">
 
       <div class="slider__item swiper-slide" *ngFor="let slide of slides">
-        <img class="hs-image" [src]="slide.img">
+        <img class="hs-image" [src]="slide.img" [srcset]="slide.srcset" sizes="57vw">
         <div class="hs-content">
           <h1 class="hs-name">{{slide.name}}</h1>
           <br>
@@ -19,11 +19,11 @@
     </div>
   </div>
 
-  <div class="olist__controls">
+  <div class="olist__controls home">
       <button class="sc ol ol-prev arrw-hor"><svg><use xlink:href="#Arrow-left"/></svg></button>
       <div class="hs-controls-inner">
         <span class="sc-num-l sc-num">01</span>
-        <div class="swiper-scrollbar"></div>
+        <div class="swiper-scrollbar home"></div>
         <span class="sc-num-r sc-num">03</span>
       </div>
       <button class="sc ol ol-next  arrw-hor"><svg><use xlink:href="#Arrow-right"/></svg></button>

@@ -5,7 +5,7 @@
     <h1 class="companies-heading">клиенты</h1>
 
     <div class="swiper-outer-wrap">
-      <div class="swiper-container clients" [swiper]="config_a">
+      <div #swiper1 class="swiper-container clients" [swiper]="config_a">
 
         <div class="swiper-wrapper">
 
@@ -41,7 +41,7 @@
 
   <div class="swiper-outer-wrap">
 
-    <div class="swiper-container partners" [swiper]="config_b">
+    <div #swiper2 class="swiper-container partners" [swiper]="config_b">
       <div class="swiper-wrapper">
 
         <div class="partners__item swiper-slide" *ngFor="let partner of partners">
@@ -63,7 +63,7 @@
 
     <div class="partners__controls">
       <button class="sc ol ol-prev ol-prev-p arrw-hor"><svg><use xlink:href="#Arrow-left"/></svg></button>
-      <div class="swiper-scrollbar swiper-scrollbar-p"></div>
+      <div class="swiper-scrollbar swiper-scrollbar-p client"></div>
       <button class="sc ol ol-next ol-next-p arrw-hor"><svg><use xlink:href="#Arrow-right"/></svg></button>
     </div>
 
