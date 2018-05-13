@@ -16,6 +16,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { DocsComponent } from './docs/docs.component';
 import { ClientsComponent } from './clients/clients.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { ModalPropComponent } from './modal-prop/modal-prop.component';
 
 // SERVICES
 import { PropertyService } from './property.service';
@@ -23,6 +24,8 @@ import { DocsService } from './docs.service';
 import { SlideService } from './slide.service';
 import { CompanyService } from './company.service';
 import { ContactService } from './contact.service';
+import { DomService } from './dom.service';
+import { ModalService } from './modal.service';
 
 // PIPES
 import { SafePipe } from './safe.pipe';
@@ -46,6 +49,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ClientsComponent,
     ContactsComponent,
     SafePipe,
+    ModalPropComponent,
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
@@ -62,6 +66,11 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SlideService,
     CompanyService,
     ContactService,
+    ModalService,
+    DomService
+  ],
+  entryComponents:[
+    ModalPropComponent
   ],
   bootstrap: [AppComponent]
 })

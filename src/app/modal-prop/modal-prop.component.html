@@ -1,0 +1,27 @@
+<div class="container popup-container">
+
+  <button (click)="close()" class="modal-close">
+    Закрыть
+  </button>
+
+  <div class="popup-swiper-wrapper">
+    <swiper #swiperPropModal [config]="swiperCfg" class="object__slider propmodal"
+    (indexChange)="onIndexChange($event)" [index]="index - 1">
+      <!-- <div class="swiper-wrapper"> -->
+        <li *ngFor="let img of images" class="swiper-slide propmodal">
+          <img [src]="img.src" [srcset]="img.srcset" class="popup-img"/>
+        </li>
+      <!-- </div> -->
+    </swiper>
+  </div>
+
+  <div class="oject__slider-controls popup-controls">
+    <button class="sc sc-prev"><svg><use xlink:href="#Arrow-top"/></svg></button>
+    <span class="sc-num sc-num-min">01</span>
+    <span id="sc-sep"></span>
+    <span class="sc-num sc-faded">{{index | number:'2.0-0'}}</span>
+    <span class="sc-num sc-num-max">{{total | number:'2.0-0'}}</span>
+    <button class="sc sc-next"><svg><use xlink:href="#Arrow-down"/></svg></button>
+  </div>
+
+</div>

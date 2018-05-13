@@ -234,3 +234,8 @@ a.object__back {
 app-home {
     position: static;
 }
+
+app-modal-prop {
+    display: flex;
+    align-items: center;
+}

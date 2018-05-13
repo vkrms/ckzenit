@@ -19,8 +19,8 @@
       <div #swiperView [swiper]="swiperCfg" class="object__slider" id="object__slider"
       (indexChange)="onIndexChange($event)" [index]="0">
         <div class="swiper-wrapper">
-          <li *ngFor="let img of images" class="swiper-slide">
-            <img [src]="img"/>
+          <li *ngFor="let img of images" class="swiper-slide property" (click)="openModal()">
+            <img [src]="img.src"/>
           </li>
         </div>
       </div>

@@ -11,7 +11,7 @@ import { fadeAnimation } from './fade.animation';
 })
 export class AppComponent {
   title = 'app';
-
+  menu;
   // change the animation state
   getRouteAnimation(outlet) {
     return outlet.activatedRouteData.state

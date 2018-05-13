@@ -21,12 +21,17 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    setTimeout(()=>this.swiperView.setIndex(0),450);
+    // console.log('ngAfterViewInit');
+    // setTimeout(()=>{
+    //   this.swiperView.setIndex(0);
+    //   window.dispatchEvent(new Event('resize'));
+    // },1000);
   }
 
   getProperties() {
     this.propertyService.getProperties().subscribe(props => {
       this.projects = props;
+      // sad, but following does nothing
       // this.swiperView.update();
       // window.dispatchEvent(new Event('resize'));
     })

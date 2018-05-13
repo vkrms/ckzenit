@@ -4,13 +4,20 @@ import { Location } from '@angular/common';
 
 import { Property } from '../property';
 import { PropertyService } from '../property.service';
+import { ModalService } from '../modal.service';
+
 
 import { SwiperModule, SwiperConfigInterface, SwiperDirective } from 'ngx-swiper-wrapper';
+
+import { ModalPropComponent } from '../modal-prop/modal-prop.component';
 
 @Component({
   selector: 'app-property',
   templateUrl: './property.component.html',
-  // styleUrls: ['./property.component.css']
+  // styleUrls: ['./property.component.css'],
+  host: {
+    '(window:resize)': 'setDirection()'
+  }
 })
 export class PropertyComponent implements OnInit {
 
@@ -26,14 +33,18 @@ export class PropertyComponent implements OnInit {
   index = 0o1;
   IDs = [];
 
-  anew($event) {
-    console.log('click');
+
+  setDirection() {
+    if (window.innerWidth <= 600) {
+      this.swiperCfg.direction = 'horizontal';
+    }
   }
 
   constructor(
     private route: ActivatedRoute,
     private propertyService: PropertyService,
-    private location: Location
+    private location: Location,
+    private modalService: ModalService
   ) {
     route.params.subscribe(val => {
       this.getProperty();
@@ -43,15 +54,23 @@ export class PropertyComponent implements OnInit {
   }
 
 
-
   ngOnInit(): void {
-
     this.id = +this.route.snapshot.paramMap.get('id');
 
     this.getProperty();
-
     this.setPrevNextLink();
+    this.setDirection();
+  }
 
+  openModal() {
+    // modal service
+    let params = {
+      images:this.images,
+      index:this.index,
+      total:this.total,
+      test: 3
+    };
+    this.modalService.init(ModalPropComponent,params,{});
   }
 
   resetIndex(){
@@ -60,7 +79,6 @@ export class PropertyComponent implements OnInit {
 
   getProperty() {
     // console.log(this.route);
-
     this.id = +this.route.snapshot.paramMap.get('id');
 
     this.propertyService.getProperty(this.id)
