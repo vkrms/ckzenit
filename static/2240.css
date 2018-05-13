@@ -10,6 +10,7 @@ header{
 
 .container {
   max-width: 1700px;
+  height: 937px;
 }
 
 app-clients, app-contacts, app-docs, app-home, app-projects, app-property {

@@ -12,12 +12,12 @@ import { ContactsComponent } from './contacts/contacts.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'property/:id', component: PropertyComponent },
-  { path: 'docs', component: DocsComponent },
-  { path: 'clients', component: ClientsComponent },
-  { path: 'contacts', component: ContactsComponent }
+  { path: 'home', component: HomeComponent, data: {state:'home'}},
+  { path: 'projects', component: ProjectsComponent, data:{state:'projects'}},
+  { path: 'property/:id', component: PropertyComponent, data:{state:'property'}},
+  { path: 'docs', component: DocsComponent, data:{state:'docs'}},
+  { path: 'clients', component: ClientsComponent, data:{state:'clients'}},
+  { path: 'contacts', component: ContactsComponent, data:{state:'contacts'}}
 ];
 
 @NgModule({

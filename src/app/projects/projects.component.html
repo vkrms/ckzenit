@@ -12,11 +12,11 @@
         routerLink="/property/{{project.id}}" >
           <span class="oi-num">{{i + 1 | number:'2.0-0'}}</span>
           <div class="oi-content">
-            <img class="oi-thumb" [src]="project?.thumb" [srcset]="project?.srcset">
             <div class="oi-text">
               <h2 class="oi-heading">{{project.name}}</h2>
               <h3 class="oi-client">{{project.client}}</h3>
             </div>
+            <img class="oi-thumb" [src]="project?.thumb" [srcset]="project?.srcset">
           </div>
           <a routerLink="/property/{{project.id}}" class="oi-link">смотреть проект</a>
         </div>

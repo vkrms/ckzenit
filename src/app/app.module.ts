@@ -1,5 +1,6 @@
 // MODULES
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -47,7 +48,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SafePipe,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, BrowserAnimationsModule,
     SwiperModule,
     PerfectScrollbarModule,
     AppRoutingModule,

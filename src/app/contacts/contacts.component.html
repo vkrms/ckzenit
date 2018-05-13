@@ -5,7 +5,7 @@
     <div class="contacts__col-left contacts__col">
       <div class="contact__page-content" [innerHTML]="content | safe: 'html'"></div>
 
-      <div [hidden]="submitted">
+      <div [hidden]="submitted" class="form-wrapper">
         <form class="contacts__form" (ngSubmit)="onSubmit()" #heroForm="ngForm">
 
           <h2 class="contacts__form-heading">Обратная связь</h2>

@@ -79,10 +79,16 @@ svg.sprites {
 .container {
     max-width: 1200px;
     width: 100%;
+    max-height: 618px;
+    height: 100%;
     /* height: calc(100% - 120px); */
     margin: 0 auto;
     padding: 0 15px;
-    /* position: relative; */
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .object__content > ul {
@@ -99,6 +105,8 @@ a#logo-link {
     width: 136px;
     height: 36px;
     display: block;
+    position: relative;
+    z-index: 2;
 }
 
 #psoc .ps__thumb-y {
@@ -191,10 +199,14 @@ app-clients, app-contacts, app-docs, app-home, app-projects, app-property {
     display: flex;
     flex-flow: row wrap;
     height: 100%;
-    height: 618px;
+    max-height: 618px;
     align-items: center;
     /* padding-bottom: 120px; */
     box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
 }
 
 [hidden] {
@@ -226,6 +238,7 @@ i.env:before {
 
 .contact__page-content {
     line-height: 40px;
+    width: 100%;
 }
 
 .lh24 {
@@ -235,7 +248,7 @@ i.env:before {
 
 article.page swiper>.swiper.s-wrapper .swiper-wrapper .swiper-slide {
     overflow: hidden;
-    max-height: 70vh;
+    /*     max-height: 70vh; */
 }
 
 svg, use, path, polygon, symbol {
@@ -252,6 +265,7 @@ main {
     margin: 0 auto;
     height: 740px;
     position: relative;
+    transition: all .3s ease;
 }
 
 
@@ -330,8 +344,10 @@ h1.companies-heading {
 }
 
 section.companies {
-    position: relative;
+    position: absolute;
     padding: 0 32px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 section.companies.clients {
@@ -349,14 +365,11 @@ section.companies.partners {
     margin: 0 auto;
 }
 
-.swiper-outer-wrap {
-    width: 83%;
-    margin-left: 8.5%;
-}
+.swiper-outer-wrap.clients {width: 91%;margin-left: auto;}
 
 h2.contacts__form-heading {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: .150em;
     text-transform: uppercase;
     margin-bottom: 40px;
@@ -368,7 +381,6 @@ h2.contacts__form-heading {
 }
 
 .contacts__col-left {
-    width: 33%;
     flex: 0 0 33%;
     margin-right: 30px;
     display: flex;
@@ -576,6 +588,7 @@ a.hs-link {
     border-bottom: 1px solid #1e1d1b;
     display: inline-block;
     margin-left: 32px;
+    white-space: nowrap;
   }
 
 
@@ -595,9 +608,11 @@ a.hs-link {
 
 .olist__controls.home {
     /* left: 5%; */
-    width: 81%;
-    width: calc(1200px * 10/12);
+    width: 100%;
+    max-width: calc(1200px * 10/12);
     margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .olist__controls.project {
@@ -646,6 +661,7 @@ h3.oi-client {
 article.page.page-objects {
     /* height: 550px; */
     position: relative;
+    /* padding-top: 64px; */
 }
 
 span.oi-num {
@@ -669,6 +685,7 @@ span.oi-num {
 img.oi-thumb {
     position: absolute;
     transition: all .3s ease;
+    top: 0;
 }
 
 .oi-text {
@@ -730,7 +747,7 @@ button.sc.ol {
 
 .object__slider {
   display: block;
-  width: 100%;
+  width: 88%;
   height: 100%;
   margin: 0 auto;
 }
@@ -752,8 +769,10 @@ article.page.page-object {
 }
 
 .object__text {
-    flex: 0 1 50%;
-    padding-left: 35px;
+    flex: 0 1 44%;
+    padding-left: 32px;
+    margin-right: 32px;
+    /* box-sizing: border-box; */
     height: 100%;
     display: flex;
     flex-flow: column;
@@ -798,6 +817,7 @@ h3.object__client {
 
 .object__slider-wrap {
     flex: 0 1 44%;
+    position: relative;
 }
 
 a.object__back {
@@ -813,6 +833,7 @@ a.object__back {
     width: 50%;
     display: flex;
     justify-content: space-between;
+    margin-right: calc(1/12 * 100% / 2);
 }
 
 .fc>svg {
@@ -846,6 +867,7 @@ button.sc {
     padding: 0;
     outline: none;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 span.sc-num {
@@ -893,6 +915,7 @@ span.sc-num.sc-faded {
 a.fc {
     transition: all .3s ease;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 a.fc:hover {
@@ -909,7 +932,7 @@ header {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto 60px;
-    padding: 24px 0 15px;
+    padding: 24px 15px 15px;
     align-items: center;
 }
 
@@ -930,20 +953,24 @@ a.header-phone {
     font-size: 14px;
     color: #2799d6;
     font-weight: bold;
+    letter-spacing: .15em;
 }
 
 .swiper-outer-wrap.projects {
-    width: 1100px;
+    width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
     height: 416px;
 }
 
 app-docs {
     align-items: flex-start;
+    position: static;
 }
 
 app-clients {
     align-items: flex-start;
+    padding-top: 20px;
 }
 
 
@@ -953,4 +980,18 @@ app-home {
 
 app-property {
     align-items: flex-start;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+button.hamburger {
+    display: none;
+    transition: all .3s ease;
+    opacity: 0;
+}
+
+.form-wrapper {
+    width: 100%;
 }

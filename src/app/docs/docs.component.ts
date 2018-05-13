@@ -23,7 +23,7 @@ export class DocsComponent implements OnInit {
   config = {
     slidesPerView: 2,
     slidesPerColumn: 2,
-    spaceBetween: 30,
+    // spaceBetween: 30,
     observer: true,
     navigation: {
       nextEl: '.ol-next',
@@ -31,6 +31,9 @@ export class DocsComponent implements OnInit {
     },
     scrollbar: {
         el: '.swiper-scrollbar'
+    },
+    breakpoints: {
+      1200: { slidesPerView: 1 }
     }
   }
 

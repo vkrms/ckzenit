@@ -13,27 +13,54 @@
       </symbol>
     </svg>
 
-    <main>
+    <button class="hamburger hamburger--minus" type="button"
+    (click)="menu=!menu" [ngClass]="{'is-active':menu}">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+    <main [ngClass]="{'menu-open':menu}">
       <header>
         <a routerLink="/" title="на главную" id="logo-link">
           <img src="assets/img/logo.svg" alt="логотип ск зенит">
         </a>
 
+
         <nav class="header-nav">
-          <a routerLink="/projects/">проекты</a>
-          <a routerLink="">о нас</a>
-          <a routerLink="/clients">клиенты и партнеры</a>
-          <a routerLink="/docs">документы</a>
-          <a routerLink="/contacts">контакты</a>
+          <a routerLink="/projects/" routerLinkActive="active">проекты</a>
+          <a routerLink=""  routerLinkActive="active">о нас</a>
+          <a routerLink="/clients" routerLinkActive="active">клиенты и партнеры</a>
+          <a routerLink="/docs" routerLinkActive="active">документы</a>
+          <a routerLink="/contacts" routerLinkActive="active">контакты</a>
         </nav>
 
         <a class="header-phone" href="tel:+7 (423) 297-97-75">
           +7 (423) 297-97-75
         </a>
-
       </header>
 
-      <div class="container">
-        <router-outlet></router-outlet>
+
+      <div class="mobile-nav">
+        <div class="mobile-nav__pagelinks">
+          <a routerLink="/projects/" routerLinkActive="active">проекты</a>
+          <a routerLink=""  routerLinkActive="active">о нас</a>
+          <a routerLink="/clients" routerLinkActive="active">клиенты и партнеры</a>
+          <a routerLink="/docs" routerLinkActive="active">документы</a>
+          <a routerLink="/contacts" routerLinkActive="active">контакты</a>
+
+          <a class="header-phone mobile-phone" href="tel:+7 (423) 297-97-75">
+            +7 (423) 297-97-75
+          </a>
+        </div>
+
       </div>
+
+
+      <div class="container">
+        <div [@fadeAnimation]="getRouteAnimation(route)">
+          <router-outlet #route="outlet"></router-outlet>
+        </div>
+      </div>
+
     </main>

@@ -35,7 +35,7 @@ export class ProjectsComponent implements OnInit {
   config = {
     initialSlide: 0,
     slidesPerView: 4,
-    slidesPerGroup: 4,
+    // slidesPerGroup: 4,
     spaceBetween: 32,
     observer: true,
     updateOnImagesReady: true,
@@ -46,6 +46,17 @@ export class ProjectsComponent implements OnInit {
     scrollbar: {
         el: '.swiper-scrollbar'
     },
+    breakpoints: {
+      1200: {
+        slidesPerView: 3,
+      },
+      900: {
+        slidesPerView: 2,
+      },
+      600: {
+        slidesPerView: 1
+      }
+    }
   };
 
 }

@@ -25,17 +25,16 @@
         </div>
       </div>
 
-    </div>
+      <div class="oject__slider-controls">
+        <button class="sc sc-prev"><svg><use xlink:href="#Arrow-top"/></svg></button>
+        <span class="sc-num sc-num-min">01</span>
+        <span id="sc-sep"></span>
+        <span class="sc-num sc-faded">{{index | number:'2.0-0'}}</span>
+        <span class="sc-num sc-num-max">{{total | number:'2.0-0'}}</span>
+        <button class="sc sc-next"><svg><use xlink:href="#Arrow-down"/></svg></button>
+      </div>
 
-    <div class="oject__slider-controls">
-      <button class="sc sc-prev"><svg><use xlink:href="#Arrow-top"/></svg></button>
-      <span class="sc-num">01</span>
-      <span id="sc-sep"></span>
-      <span class="sc-num sc-faded">{{index | number:'2.0-0'}}</span>
-      <span class="sc-num">{{total | number:'2.0-0'}}</span>
-      <button class="sc sc-next"><svg><use xlink:href="#Arrow-down"/></svg></button>
     </div>
-
 
 </article>
 
@@ -43,7 +42,7 @@
   <!-- <a (click)="anew($event)">go to 0</a> -->
   <a routerLink="/projects/" class="object__back">вернуться к списку</a>
   <div class="footer-controls">
-    <a class="fc fc-prev" [routerLink]="prev" (click)="resetIndex()"><svg><use xlink:href="#Arrow-left"/></svg>предыдущий проект</a>
-    <a class="fc fc-next" [routerLink]="next" (click)="resetIndex()">следующий проект<svg><use xlink:href="#Arrow-right"/></svg></a>
+    <a class="fc fc-prev" [routerLink]="prev" (click)="resetIndex()"><svg><use xlink:href="#Arrow-left"/></svg><span>предыдущий проект</span></a>
+    <a class="fc fc-next" [routerLink]="next" (click)="resetIndex()"><span>следующий проект</span><svg><use xlink:href="#Arrow-right"/></svg></a>
   </div>
 </footer>

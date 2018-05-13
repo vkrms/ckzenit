@@ -57,6 +57,14 @@ export class ClientsComponent implements OnInit {
         el: '.swiper-scrollbar-c',
         hide: false
     },
+    breakpoints: {
+      1200: {
+        slidesPerView: 3
+      },
+      600: {
+        slidesPerView: 1
+      }
+    }
   }
 
   config_b = {
@@ -71,6 +79,14 @@ export class ClientsComponent implements OnInit {
         el: '.swiper-scrollbar-p',
         hide: false
     },
+    breakpoints: {
+      1200: {
+        slidesPerView: 2
+      },
+      600: {
+        slidesPerView: 1
+      }      
+    }
   }
 
 }
