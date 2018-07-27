@@ -1,0 +1,49 @@
+/* vertical media querry god damn it */
+@media screen and (max-height:738px) {
+  .olist__controls,.docs__controls {
+    margin-bottom: 24px;
+  }
+
+  .clients__controls, .partners__controls {
+    margin: 32px auto 24px
+  }
+
+  .docs__item {
+      margin-bottom: 32px;
+  }
+
+  h1.article-heading {
+      margin-bottom: 24px;
+  }
+
+  h4.docs__name {
+      font-size: 12px;
+  }
+
+  .docs__img-wrap>img {
+      height: 156px;
+  }
+
+  .contacts__col {
+      max-height: 480px;
+  }
+}
+
+
+article.page.page-object {
+    padding-bottom: 48px;
+    box-sizing: border-box;
+}
+
+footer.object__footer {
+    padding-bottom: 24px;
+}
+
+.container {
+    top: 80px;
+    height: calc(100% - 80px);
+}
+
+article.page.page-objects {
+    padding-bottom: 70px;
+}

@@ -16,9 +16,9 @@ header{
 }
 
 app-clients, app-contacts, app-docs, app-home, app-projects, app-property {
-  max-height: 936px;
-  position: absolute;
-  bottom: 0;
+max-height: 936px;
+position: absolute;
+bottom: 0;
 }
 
 
@@ -26,7 +26,7 @@ app-clients, app-contacts, app-docs, app-home, app-projects, app-property {
     max-width: none;
 }
 
-img.hs-image {
+.hs-image-wrap {
     height: 100%;
     width: auto;
     max-width: 1454px;

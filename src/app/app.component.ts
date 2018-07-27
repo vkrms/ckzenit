@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { routerTransition } from './router.animations';
 import { fadeAnimation } from './fade.animation';
 
@@ -11,10 +11,14 @@ import { fadeAnimation } from './fade.animation';
 })
 export class AppComponent {
   title = 'app';
-  menu;
+  menu = false;
   // change the animation state
   getRouteAnimation(outlet) {
     return outlet.activatedRouteData.state
+  }
+
+  hideMenu() {
+    this.menu = !this.menu;
   }
 
 }

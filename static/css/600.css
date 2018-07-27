@@ -6,7 +6,8 @@ header {
 }
 
 .container {
-    padding-top: 88px;
+    padding-top: 8px;
+    height: calc(100% - 88px);
 }
 
 h1.hs-name {
@@ -48,7 +49,7 @@ span.oi-num {
 
 .olist__item.swiper-slide {
     position: relative;
-    padding: 0 55px;
+    padding: 0 32px 0 42px;
     box-sizing: border-box;
 }
 
@@ -69,6 +70,7 @@ h3.oi-client {
 
 .oi-content {
     width: auto;
+    margin: 0 0 24px;
 }
 
 a.oi-link {
@@ -87,7 +89,7 @@ app-property {
 }
 
 .object__content {
-    padding-right: 0;
+    padding-right: 10px;
     margin-right: 0;
 }
 
@@ -226,6 +228,7 @@ h4.docs__name {
 
 app-docs {
     padding-bottom: 72px;
+    max-height: 100%;
 }
 
 span.doc-num {
@@ -251,4 +254,14 @@ form.contacts__form {
 
 .contacts__col-right {
     height: 264px;
+    margin-top: 24px;
+}
+
+article.page.page-objects {
+    align-items: flex-start;
+}
+
+
+article.page.page-object {
+    padding-bottom: 0 !important;
 }

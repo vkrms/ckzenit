@@ -7,7 +7,9 @@
     <div class="swiper-wrapper">
 
       <div class="slider__item swiper-slide" *ngFor="let slide of slides">
-        <img class="hs-image" [src]="slide.img" [srcset]="slide.srcset" sizes="57vw">
+        <div class="hs-image-wrap">
+          <img class="hs-image" [src]="slide.img" [srcset]="slide.srcset" sizes="57vw">          
+        </div>
         <div class="hs-content">
           <h1 class="hs-name">{{slide.name}}</h1>
           <br>

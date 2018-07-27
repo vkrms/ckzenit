@@ -21,19 +21,19 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    // console.log('ngAfterViewInit');
-    // setTimeout(()=>{
-    //   this.swiperView.setIndex(0);
-    //   window.dispatchEvent(new Event('resize'));
-    // },1000);
+    console.log('ngAfterViewInit');
+    setTimeout(()=>{
+      this.swiperView.setIndex(0);
+      window.dispatchEvent(new Event('resize'));
+    },1000);
   }
 
   getProperties() {
     this.propertyService.getProperties().subscribe(props => {
       this.projects = props;
       // sad, but following does nothing
-      // this.swiperView.update();
-      // window.dispatchEvent(new Event('resize'));
+      this.swiperView.update();
+      window.dispatchEvent(new Event('resize'));
     })
   }
 
@@ -43,6 +43,7 @@ export class ProjectsComponent implements OnInit {
     // slidesPerGroup: 4,
     spaceBetween: 32,
     observer: true,
+    loop: false,
     updateOnImagesReady: true,
     navigation: {
       nextEl: '.ol-next',

@@ -6,21 +6,46 @@
       <div class="contact__page-content" [innerHTML]="content | safe: 'html'"></div>
 
       <div [hidden]="submitted" class="form-wrapper">
+
         <form class="contacts__form" (ngSubmit)="onSubmit()" #heroForm="ngForm">
 
           <h2 class="contacts__form-heading">Обратная связь</h2>
 
-          <input  type="text" class="contacts__input" placeholder="Ваше имя"
-          required
-          [(ngModel)]="model.name" name="name">
+          <div class="contacts__input-wrap">
+            <input  type="text" class="contacts__input" placeholder="Ваше имя"
+            required minlength="2"
+            [(ngModel)]="model.name" name="name" #nameVar="ngModel">
+            <div *ngIf="nameVar.invalid && (nameVar.dirty || nameVar.touched)" class="contacts__invalid">
+              <div *ngIf="nameVar.errors.required">
+                Заполните имя.
+              </div>
+              <div *ngIf="nameVar.errors.minlength">
+                Имя должно быть не менее 2х символов.
+              </div>
+            </div>
+          </div>
 
-          <input  type="email" class="contacts__input" placeholder="Email"
-          required
-          [(ngModel)]="model.email" name="email">
+          <div class="contacts__input-wrap">
+            <input  type="email" class="contacts__input" placeholder="Email"
+            required
+            [(ngModel)]="model.email" name="email" #email="ngModel">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="contacts__invalid">
+              <div *ngIf="email.errors.required">
+                Заполните email.
+              </div>
+            </div>
+          </div>
 
-          <input  type="text" class="contacts__input" placeholder="Сообщение"
-          required
-          [(ngModel)]="model.message" name="message">
+          <div class="contacts__input-wrap">
+            <input  type="text" class="contacts__input" placeholder="Сообщение"
+            required
+            [(ngModel)]="model.message" name="message" #message="ngModel">
+            <div *ngIf="message.invalid && (message.dirty || message.touched)" class="contacts__invalid">
+              <div *ngIf="message.errors.required">
+                Заполните сообщение.
+              </div>
+            </div>
+          </div>
 
           <button type="submit" class="contacts__submit"
           [disabled]="!heroForm.form.valid">отправить</button>

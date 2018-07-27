@@ -13,36 +13,41 @@
       </symbol>
     </svg>
 
-    <button class="hamburger hamburger--minus" type="button"
-    (click)="menu=!menu" [ngClass]="{'is-active':menu}">
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button>
+
+
+    <header>
+      <a routerLink="/" title="на главную" id="logo-link" (click)="hideMenu()">
+        <img src="assets/img/logo.svg" alt="логотип ск зенит">
+      </a>
+
+
+      <nav class="header-nav" (click)="hideMenu()">
+        <a routerLink="/projects/" routerLinkActive="active">проекты</a>
+        <a routerLink=""  routerLinkActive="active">о нас</a>
+        <a routerLink="/clients" routerLinkActive="active">клиенты и партнеры</a>
+        <a routerLink="/docs" routerLinkActive="active">документы</a>
+        <a routerLink="/contacts" routerLinkActive="active">контакты</a>
+      </nav>
+
+      <a class="header-phone" href="tel:+7 (423) 297-97-75">
+        +7 (423) 297-97-75
+      </a>
+
+      <button class="hamburger hamburger--minus" type="button"
+      (click)="menu=!menu" [ngClass]="{'is-active':menu}">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+    </header>
+
 
     <main [ngClass]="{'menu-open':menu}">
-      <header>
-        <a routerLink="/" title="на главную" id="logo-link">
-          <img src="assets/img/logo.svg" alt="логотип ск зенит">
-        </a>
-
-
-        <nav class="header-nav">
-          <a routerLink="/projects/" routerLinkActive="active">проекты</a>
-          <a routerLink=""  routerLinkActive="active">о нас</a>
-          <a routerLink="/clients" routerLinkActive="active">клиенты и партнеры</a>
-          <a routerLink="/docs" routerLinkActive="active">документы</a>
-          <a routerLink="/contacts" routerLinkActive="active">контакты</a>
-        </nav>
-
-        <a class="header-phone" href="tel:+7 (423) 297-97-75">
-          +7 (423) 297-97-75
-        </a>
-      </header>
 
 
       <div class="mobile-nav">
-        <div class="mobile-nav__pagelinks">
+        <div class="mobile-nav__pagelinks" (click)="hideMenu()">
           <a routerLink="/projects/" routerLinkActive="active">проекты</a>
           <a routerLink=""  routerLinkActive="active">о нас</a>
           <a routerLink="/clients" routerLinkActive="active">клиенты и партнеры</a>

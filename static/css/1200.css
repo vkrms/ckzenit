@@ -2,11 +2,6 @@ article.page.homepage {
     padding-left: 0;
 }
 
-
-main.menu-open {
-    transform: translateX(-270px);
-}
-
 a#logo-link {
     width: 166px;
     height: 42px;
@@ -59,4 +54,9 @@ app-contacts {
 .olist__item:hover img.oi-thumb {
     opacity: 1;
     visibility: visible;
+}
+
+img.hs-image-wrap {
+    height: 100%;
+    width: auto;
 }

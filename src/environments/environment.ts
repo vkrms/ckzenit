@@ -5,7 +5,8 @@
 
 export const environment = {
   production: false,
-  server: "http://localhost:8085",
+  server: "http://cms.ckzenit.ru",
+  // server: "http://localhost:8085",
   // resource: "http://localhost:8085/wp-json/ckz/v1",
   get resource() {
     return this.server + '/wp-json/ckz/v1'
